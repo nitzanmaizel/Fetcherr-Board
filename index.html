@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>לוח משרות חמות - החברה שלנו</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>לוח משרות חמות - החברה שלנו</h1>
+    <!-- <img src="Exmpale.jpeg" alt="Company Logo" width="400" /> -->
+    <div class="filters">
+      <div>
+        <label for="location">מיקום:</label>
+        <select id="location"></select>
+      </div>
+      <div>
+        <label for="department">מחלקה:</label>
+        <select id="department"></select>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="hotOnly" />
+        <label for="hotOnly">הצג רק משרות חמות</label>
+      </div>
+    </div>
+
+    <div class="job-list" id="jobList"></div>
+  </body>
+</html>
