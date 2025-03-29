@@ -128,7 +128,7 @@ h1 {
   background: #f9fafb;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: var(--space-md);
+  padding: 10px 20px;
   position: relative;
   display: flex;
   flex-direction: column;
