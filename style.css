@@ -87,6 +87,7 @@ h1 {
   background: var(--color-white);
   padding: var(--space-lg);
   border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 .filters > div {
@@ -133,6 +134,7 @@ h1 {
   flex-direction: column;
   gap: var(--space-md);
   box-sizing: border-box;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 .job-card h3 {
