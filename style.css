@@ -1,11 +1,9 @@
 :root {
   --font-family: Arial, sans-serif;
 
-  
-
   /* Colors */
   --color-primary: #4dbdab;
-  --color-primary-50: rgba(77, 189, 171, 0.5);
+  --color-primary-50: rgba(77, 189, 171, 0.2);
 
   --color-light-blue: #dfeafb;
   --color-dark-blue: #4d5bad;
