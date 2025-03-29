@@ -125,7 +125,7 @@ h1 {
 .job-card {
   flex: 1 1 30%;
   max-width: 30%;
-  background: var(--color-white);
+  background: #f9fafb;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-md);
