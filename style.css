@@ -1,0 +1,163 @@
+:root {
+  --font-family: Arial, sans-serif;
+
+  /* Colors */
+  --color-primary: #d55851;
+  --color-light-blue: #dfeafb;
+  --color-dark-blue: #4d5bad;
+  --color-card-title: #516ae4;
+  --color-text: #525965;
+  --color-bg: #fff;
+  --color-white: #fff;
+  --color-border: var(--color-primary);
+  --color-tag-bg: var(--color-light-blue);
+  --color-tag-text: var(--color-dark-blue);
+  --color-hot-bg: var(--color-primary);
+  --color-hot-text: var(--color-white);
+  --color-link: #7191ec;
+
+  /* Spacing */
+  --space-sm: 5px;
+  --space-md: 10px;
+  --space-lg: 20px;
+  --space-xl: 30px;
+
+  /* Border radius */
+  --radius: 10px;
+  --radius-sm: 5px;
+  --radius-lg: 20px;
+
+  /* Font sizes */
+  --font-sm: 12px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  padding: var(--space-lg);
+  direction: rtl;
+  color: var(--color-text);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-size: 24px;
+  color: #000;
+}
+
+/* Filters section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  background: #f3f4f6;
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+}
+
+.filters > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.filters label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.filters select,
+.filters input[type="checkbox"] {
+  padding: var(--space-sm);
+}
+
+.filters .checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: var(--space-md);
+}
+
+/* Job list layout using Flexbox */
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  justify-content: space-between;
+}
+
+/* Job card */
+.job-card {
+  flex: 1 1 30%;
+  max-width: 30%;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  box-sizing: border-box;
+}
+
+.job-card h3 {
+  color: var(--color-card-title);
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 768px) {
+  .job-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    /* padding: var(--space-md); */
+  }
+}
+
+/* Hot job banner */
+.hot-banner {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  background: var(--color-hot-bg);
+  color: var(--color-hot-text);
+  font-weight: bold;
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-sm);
+  border-radius: var(--radius-lg);
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.tag {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  padding: 3px 8px;
+  border-radius: var(--radius);
+  font-size: var(--font-sm);
+}
+
+/* Link */
+.job-link {
+  color: var(--color-link);
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: var(--space-sm);
+  text-decoration: none;
+  font-weight: 700;
+}
