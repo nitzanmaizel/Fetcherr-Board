@@ -139,6 +139,8 @@ h1 {
 
 .job-card h3 {
   color: var(--color-card-title);
+  border-bottom: 1px solid #0000001a;
+  padding: 5px 0;
 }
 
 /* Responsive: stack cards on small screens */
