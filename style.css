@@ -2,19 +2,21 @@
   --font-family: Arial, sans-serif;
 
   /* Colors */
-  --color-primary: #d55851;
+  --color-primary: #4dbdab;
+  --color-primary-50: rgba(77, 189, 171, 0.5);
+
   --color-light-blue: #dfeafb;
   --color-dark-blue: #4d5bad;
-  --color-card-title: #516ae4;
-  --color-text: #525965;
+  --color-text: #131316;
+  --color-card-title: var(--color-card-title);
   --color-bg: #fff;
   --color-white: #fff;
   --color-border: var(--color-primary);
-  --color-tag-bg: var(--color-light-blue);
-  --color-tag-text: var(--color-dark-blue);
+  --color-tag-bg: var(--color-primary);
+  --color-tag-text: var(--color-white);
   --color-hot-bg: var(--color-primary);
   --color-hot-text: var(--color-white);
-  --color-link: #7191ec;
+  --color-link: #4dbdab;
 
   /* Spacing */
   --space-sm: 5px;
@@ -42,24 +44,47 @@ body {
   font-family: var(--font-family);
   background: var(--color-bg);
   padding: var(--space-lg);
-  direction: rtl;
   color: var(--color-text);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #0000001a;
+  padding-bottom: var(--space-md);
+}
+
+.logo {
+  color: #031a16;
+  transition: color 0.25s ease;
+}
+
+.logo:hover {
+  color: #30d9c4;
+}
+
+@media screen and (max-width: 479px) {
+  .logo {
+    width: 2.6rem;
+    height: 5.6rem;
+  }
 }
 
 h1 {
   text-align: center;
-  margin-bottom: var(--space-xl);
+  margin: var(--space-xl) 0;
   font-size: 24px;
   color: #000;
 }
 
 /* Filters section */
+
 .filters {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
-  background: #f3f4f6;
+  background: var(--color-primary-50);
   padding: var(--space-lg);
   border-radius: var(--radius);
 }
@@ -67,7 +92,6 @@ h1 {
 .filters > div {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
 }
 
 .filters label {
@@ -85,6 +109,7 @@ h1 {
   flex-direction: row;
   align-items: end;
   gap: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 /* Job list layout using Flexbox */
@@ -160,5 +185,10 @@ h1 {
   margin-top: var(--space-sm);
   text-decoration: none;
   font-weight: 700;
+  border: 1px solid var(--color-link);
+  padding: 10px;
+  border-radius: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
 }
-
