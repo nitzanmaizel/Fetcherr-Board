@@ -42,7 +42,7 @@
 
 body {
   font-family: var(--font-family);
-  background: var(--color-bg);
+  background: var(--color-primary);
   padding: var(--space-lg);
   color: var(--color-text);
 }
@@ -84,7 +84,7 @@ h1 {
   flex-wrap: wrap;
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
-  background: var(--color-primary-50);
+  background: var(--color-white);
   padding: var(--space-lg);
   border-radius: var(--radius);
 }
@@ -191,4 +191,9 @@ h1 {
   width: 120px;
   display: flex;
   justify-content: center;
+}
+
+.job-link:hover {
+  background: #53d7c3;
+  color: #fff;
 }
