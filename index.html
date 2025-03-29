@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,24 +8,39 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="nav-bar">
+      <svg
+        class="logo"
+        width="4rem"
+        height="8rem"
+        viewBox="0 0 40 80"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21.7659 0H39.1167V2.54066H24.3065V7.37412H39.1167V9.91479H24.3065V14.7482H39.1167V17.2889H21.7659V0ZM21.7659 38.2339H39.1167V35.6933H24.3065V23.4857H39.1167V20.945H21.7659V38.2339ZM0.882812 17.3509H3.42348V9.97676H18.2337V7.37412H3.42348V2.54066H18.2337V0H0.882812V17.3509ZM0.882812 38.2339H18.2337V35.6933H3.42348V30.8598H18.2337V28.3191H3.42348V20.945H0.882812V38.2339ZM15.6311 41.7661V49.1402H3.42348V41.7661H0.882812V59.117H3.42348V51.7428H15.6311V59.117H18.1717V41.7661H15.6311ZM21.7659 59.117H39.1167V56.5763H24.3065V51.7428H39.1167V49.2022H24.3065V44.3687H39.1167V41.828H21.7659V59.117ZM39.1167 80H36.2662L32.6102 72.6258H24.3685V80H21.7659V62.6491H39.1167V72.6258H35.3987L39.1167 80ZM24.3065 70.0232H36.5141V65.1898H24.3065V70.0232ZM18.2337 80H15.3832L11.7271 72.6258H3.48545V80H0.944784V62.6491H18.2957V72.6258H14.5776L18.2337 80ZM3.42348 70.0232H15.6311V65.1898H3.42348V70.0232Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+
+      <style></style>
+    </div>
     <h1>לוח משרות חמות - החברה שלנו</h1>
-    <!-- <img src="Exmpale.jpeg" alt="Company Logo" width="400" /> -->
     <div class="filters">
       <div>
-        <label for="location">מיקום:</label>
+        <label for="location">Location:</label>
         <select id="location"></select>
       </div>
       <div>
-        <label for="department">מחלקה:</label>
+        <label for="department">Department:</label>
         <select id="department"></select>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="hotOnly" />
-        <label for="hotOnly">הצג רק משרות חמות</label>
+        <label for="hotOnly">Show best</label>
       </div>
     </div>
 
     <div class="job-list" id="jobList"></div>
   </body>
 </html>
-
