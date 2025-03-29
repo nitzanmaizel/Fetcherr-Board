@@ -20,6 +20,41 @@ const jobs = [
     isHot: false,
     link: "#",
   },
+  {
+    title: "מפתח/ת צד שרת",
+    department: "פיתוח",
+    locations: ["ישראל"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "ראש צוות בדיקות אוטומטיות",
+    department: "בדיקות",
+    locations: ["פולין", "ישראל"],
+    isHot: true,
+    link: "#",
+  },
+  {
+    title: "מומחה/ית SEO",
+    department: "שיווק",
+    locations: ["פולין"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "אנליסט/ית נתונים",
+    department: "BI",
+    locations: ["ישראל"],
+    isHot: true,
+    link: "#",
+  },
+  {
+    title: "מפתח/ת מובייל",
+    department: "פיתוח",
+    locations: ["פולין"],
+    isHot: false,
+    link: "#",
+  },
 ];
 
 // Filter and render logic — same as before
@@ -50,9 +85,7 @@ function populateFilters() {
 }
 
 function renderJobCard(job) {
-  const tags = job.locations
-    .map((loc) => `<span class="tag">${loc}</span>`)
-    .join(" ");
+  const tags = job.locations.map((loc) => `<span class="tag">${loc}</span>`).join(" ");
 
   return `
       <div class="job-card">
@@ -77,8 +110,7 @@ function applyFilters() {
 
   const filteredJobs = jobs.filter((job) => {
     const matchDept = selectedDept === "הכל" || job.department === selectedDept;
-    const matchLoc =
-      selectedLoc === "הכל" || job.locations.includes(selectedLoc);
+    const matchLoc = selectedLoc === "הכל" || job.locations.includes(selectedLoc);
     const matchHot = !hotOnly || job.isHot;
     return matchDept && matchLoc && matchHot;
   });
@@ -90,9 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   populateFilters();
   renderJobs(jobs);
 
-  document
-    .getElementById("department")
-    .addEventListener("change", applyFilters);
+  document.getElementById("department").addEventListener("change", applyFilters);
   document.getElementById("location").addEventListener("change", applyFilters);
   document.getElementById("hotOnly").addEventListener("change", applyFilters);
 });
