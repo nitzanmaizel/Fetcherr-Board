@@ -5,44 +5,51 @@ const jobs = [
     department: "Operations",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "IT and Helpdesk Administrator",
     department: "Operations",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/2015F",
   },
 
   // Applications
   {
-    title: "Backend Applications Engineer",
+    title: "Web Application Backend Engineer",
     department: "Applications",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/74356",
   },
   {
     title: "DevOps Engineer (US)",
     department: "Applications",
-    locations: ["Atlanta"],
+    locations: ["Miami"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/C374B",
   },
   {
     title: "Full Stack Engineer",
     department: "Applications",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/00D4B",
+  },
+  {
+    title: "FinOps Specialist",
+    department: "Applications",
+    locations: ["Israel"],
+    isHot: false,
+    link: "https://www.fetcherr.io/careers/11E49",
   },
   {
     title: "Backend Engineer",
     department: "Applications",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/19E41",
   },
 
   // Finance
@@ -51,7 +58,7 @@ const jobs = [
     department: "Finance",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/32356",
   },
 
   // Engineering
@@ -60,56 +67,56 @@ const jobs = [
     department: "Engineering",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "Data Scientist - Deep Learning Forecasting",
     department: "Engineering",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "Data Scientist",
     department: "Engineering",
     locations: ["Poland"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "Algorithm Engineer",
     department: "Engineering",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "ML/DL Engineer",
     department: "Engineering",
     locations: ["Poland"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "Data Scientist",
     department: "Engineering",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "Data Engineer",
     department: "Engineering",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "Data Scientist Engineer",
     department: "Engineering",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
 
   // Management
@@ -118,7 +125,7 @@ const jobs = [
     department: "Management",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
 
   // QA
@@ -127,7 +134,7 @@ const jobs = [
     department: "QA",
     locations: ["Israel"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
 
   // Support
@@ -136,17 +143,16 @@ const jobs = [
     department: "Support",
     locations: ["Poland"],
     isHot: false,
-    link: "#",
+    link: "https://www.fetcherr.io/careers/D6350",
   },
   {
     title: "Customer Support Engineer",
     department: "Support",
     locations: ["Poland"],
     isHot: false,
-    link: "#",
-  }
+    link: "https://www.fetcherr.io/careers/D6350",
+  },
 ];
-
 
 // Filter and render logic — same as before
 
@@ -157,8 +163,8 @@ function populateFilters() {
   const deptSelect = document.getElementById("department");
   const locSelect = document.getElementById("location");
 
-  deptSelect.innerHTML = `<option value="הכל">הכל</option>`;
-  locSelect.innerHTML = `<option value="הכל">הכל</option>`;
+  deptSelect.innerHTML = `<option value="All">All</option>`;
+  locSelect.innerHTML = `<option value="All">All</option>`;
 
   departments.forEach((dept) => {
     const opt = document.createElement("option");
@@ -176,15 +182,17 @@ function populateFilters() {
 }
 
 function renderJobCard(job) {
-  const tags = job.locations.map((loc) => `<span class="tag">${loc}</span>`).join(" ");
+  const tags = job.locations
+    .map((loc) => `<span class="tag">${loc}</span>`)
+    .join(" ");
 
   return `
       <div class="job-card">
-        ${job.isHot ? '<div class="hot-banner">משרה חמה!</div>' : ""}
+        ${job.isHot ? '<div class="hot-banner">Hot Job</div>' : ""}
         <h3>${job.title}</h3>
-        <p><strong>מחלקה:</strong> ${job.department}</p>
-        <p><strong>מיקומים:</strong> ${tags}</p>
-        <a class="job-link" href="${job.link}">פרטים נוספים והגשת מועמדות ←</a>
+        <p><strong>Department:</strong> ${job.department}</p>
+        <p><strong>Location:</strong> ${tags}</p>
+        <a class="job-link" href="${job.link}">Apply Now</a>
       </div>
     `;
 }
@@ -200,8 +208,9 @@ function applyFilters() {
   const hotOnly = document.getElementById("hotOnly").checked;
 
   const filteredJobs = jobs.filter((job) => {
-    const matchDept = selectedDept === "הכל" || job.department === selectedDept;
-    const matchLoc = selectedLoc === "הכל" || job.locations.includes(selectedLoc);
+    const matchDept = selectedDept === "All" || job.department === selectedDept;
+    const matchLoc =
+      selectedLoc === "All" || job.locations.includes(selectedLoc);
     const matchHot = !hotOnly || job.isHot;
     return matchDept && matchLoc && matchHot;
   });
@@ -213,7 +222,9 @@ document.addEventListener("DOMContentLoaded", () => {
   populateFilters();
   renderJobs(jobs);
 
-  document.getElementById("department").addEventListener("change", applyFilters);
+  document
+    .getElementById("department")
+    .addEventListener("change", applyFilters);
   document.getElementById("location").addEventListener("change", applyFilters);
   document.getElementById("hotOnly").addEventListener("change", applyFilters);
 });
