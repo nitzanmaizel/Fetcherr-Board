@@ -1,61 +1,152 @@
 const jobs = [
+  // Operations
   {
-    title: "מהנדס/ת תוכנה בכיר/ה",
-    department: "פיתוח",
-    locations: ["ישראל", "פולין"],
-    isHot: true,
-    link: "#",
-  },
-  {
-    title: "מנהל/ת מוצר",
-    department: "מוצר",
-    locations: ["ישראל"],
-    isHot: true,
-    link: "#",
-  },
-  {
-    title: "מעצב/ת UI/UX",
-    department: "עיצוב",
-    locations: ["פולין"],
+    title: "IT Specialist",
+    department: "Operations",
+    locations: ["Israel"],
     isHot: false,
     link: "#",
   },
   {
-    title: "מפתח/ת צד שרת",
-    department: "פיתוח",
-    locations: ["ישראל"],
+    title: "IT and Helpdesk Administrator",
+    department: "Operations",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+
+  // Applications
+  {
+    title: "Backend Applications Engineer",
+    department: "Applications",
+    locations: ["Israel"],
     isHot: false,
     link: "#",
   },
   {
-    title: "ראש צוות בדיקות אוטומטיות",
-    department: "בדיקות",
-    locations: ["פולין", "ישראל"],
-    isHot: true,
-    link: "#",
-  },
-  {
-    title: "מומחה/ית SEO",
-    department: "שיווק",
-    locations: ["פולין"],
+    title: "DevOps Engineer (US)",
+    department: "Applications",
+    locations: ["Atlanta"],
     isHot: false,
     link: "#",
   },
   {
-    title: "אנליסט/ית נתונים",
-    department: "BI",
-    locations: ["ישראל"],
-    isHot: true,
-    link: "#",
-  },
-  {
-    title: "מפתח/ת מובייל",
-    department: "פיתוח",
-    locations: ["פולין"],
+    title: "Full Stack Engineer",
+    department: "Applications",
+    locations: ["Israel"],
     isHot: false,
     link: "#",
   },
+  {
+    title: "Backend Engineer",
+    department: "Applications",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+
+  // Finance
+  {
+    title: "Senior FP&A Analyst",
+    department: "Finance",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+
+  // Engineering
+  {
+    title: "AI MLOps Engineer",
+    department: "Engineering",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "Data Scientist - Deep Learning Forecasting",
+    department: "Engineering",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "Data Scientist",
+    department: "Engineering",
+    locations: ["Poland"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "Algorithm Engineer",
+    department: "Engineering",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "ML/DL Engineer",
+    department: "Engineering",
+    locations: ["Poland"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "Data Scientist",
+    department: "Engineering",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "Data Engineer",
+    department: "Engineering",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "Data Scientist Engineer",
+    department: "Engineering",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+
+  // Management
+  {
+    title: "Director of R&D",
+    department: "Management",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+
+  // QA
+  {
+    title: "QA Team Lead",
+    department: "QA",
+    locations: ["Israel"],
+    isHot: false,
+    link: "#",
+  },
+
+  // Support
+  {
+    title: "Junior Data Engineer",
+    department: "Support",
+    locations: ["Poland"],
+    isHot: false,
+    link: "#",
+  },
+  {
+    title: "Customer Support Engineer",
+    department: "Support",
+    locations: ["Poland"],
+    isHot: false,
+    link: "#",
+  }
 ];
+
 
 // Filter and render logic — same as before
 
